@@ -84,7 +84,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAPICodePack">
@@ -188,7 +188,6 @@
       <SubType>Designer</SubType>
     </None>
     <Resource Include="Icons2.res" />
-    <None Include="GVNotifier_3_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -205,11 +204,11 @@
     <Resource Include="Images\gv.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DavuxLib2\DavuxLib2\DavuxLib2.csproj">
+    <ProjectReference Include="..\DavuxLib2\DavuxLib2\DavuxLib2.csproj">
       <Project>{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}</Project>
       <Name>DavuxLib2</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\GoogleVoice\GoogleVoice\GoogleVoice.csproj">
+    <ProjectReference Include="..\GoogleVoice\GoogleVoice\GoogleVoice.csproj">
       <Project>{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}</Project>
       <Name>GoogleVoice</Name>
     </ProjectReference>

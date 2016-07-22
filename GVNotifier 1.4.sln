@@ -1,11 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GVNotifier", "GVNotifierWPF\GVNotifier.csproj", "{0E3DA395-6DD7-49F0-96C8-8E4CA7E011B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleVoice", "..\GoogleVoice\GoogleVoice\GoogleVoice.csproj", "{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleVoice", "GoogleVoice\GoogleVoice\GoogleVoice.csproj", "{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavuxLib2", "..\DavuxLib2\DavuxLib2\DavuxLib2.csproj", "{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DavuxLib2", "DavuxLib2\DavuxLib2\DavuxLib2.csproj", "{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,21 +34,25 @@ Global
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Debug|x86.Build.0 = Debug|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Release|x86.ActiveCfg = Release|Any CPU
+		{13A5F3F6-27A1-48CF-84C9-AC57A1016AE3}.Release|x86.Build.0 = Release|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Debug|x86.Build.0 = Debug|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE2A81EA-6848-4BAA-AAEE-68B8D778640E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

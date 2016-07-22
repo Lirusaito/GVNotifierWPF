@@ -1,0 +1,6 @@
+[submodule "DavuxLib2"]
+	path = DavuxLib2
+	url = https://github.com/davuxcom/DavuxLib2
+[submodule "GoogleVoice"]
+	path = GoogleVoice
+	url = https://github.com/davuxcom/GoogleVoice
