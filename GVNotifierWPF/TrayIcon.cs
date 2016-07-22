@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DavuxLib2;
+﻿using DavuxLib2;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -16,27 +12,25 @@ namespace GVNotifier
             {
                 var t = new Thread(() =>
                 {
-                    NotifyIcon ni = new NotifyIcon();
-                    ni.Icon = GVNotifier.Properties.Resources.gv;
-                    ni.Text = "GVNotifier";
-                    ni.Visible = true;
+                    NotifyIcon ni = new NotifyIcon
+                    {
+                        Icon = Properties.Resources.gv,
+                        Text = "GVNotifier",
+                        Visible = true,
+                        ContextMenu = new ContextMenu()
+                    };
 
-                    ni.ContextMenu = new ContextMenu();
-
-                    var m = new MenuItem();
-                    m.Text = "About";
+                    var m = new MenuItem("About");
                     m.Click += (ss, ee) => SessionModel.ShowAbout();
                     ni.ContextMenu.MenuItems.Add(m);
 
-                    m = new MenuItem();
-                    m.Text = "Preferences";
+                    m = new MenuItem("Preferences");
                     m.Click += (ss, ee) => SessionModel.ShowPrefs();
                     ni.ContextMenu.MenuItems.Add(m);
 
                     ni.ContextMenu.MenuItems.Add(new MenuItem("-"));
 
-                    m = new MenuItem();
-                    m.Text = "Check for new messages";
+                    m = new MenuItem("Check for new messages");
                     m.Click += (ss, ee) => SessionModel.Check();
                     ni.ContextMenu.MenuItems.Add(m);
 
@@ -50,8 +44,7 @@ namespace GVNotifier
 
                     ni.ContextMenu.MenuItems.Add(new MenuItem("-"));
 
-                    m = new MenuItem();
-                    m.Text = "Sign Out";
+                    m = new MenuItem("Sign Out");
                     m.Click += (ss, ee) =>
                     {
                         ni.Visible = false;
@@ -59,8 +52,7 @@ namespace GVNotifier
                     };
                     ni.ContextMenu.MenuItems.Add(m);
 
-                    m = new MenuItem();
-                    m.Text = "Quit";
+                    m = new MenuItem("Quit");
                     m.Click += (ss, ee) =>
                     {
                         ni.Visible = false;

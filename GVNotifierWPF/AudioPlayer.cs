@@ -25,15 +25,14 @@ namespace GVNotifier
 
         public AudioPlayer()
         {
-            this.CreateHandle(cp);
+            CreateHandle(cp);
 
             timer.Tick += (ss, ee) =>
             {
                 StringBuilder sb = new StringBuilder(255);
                 mciSendString("status MediaFile position", sb, 255, Handle);
                 int currentPosition = int.Parse(sb.ToString());
-                if (PlayingProgressChanged != null)
-                    PlayingProgressChanged(currentPosition, Length);
+                PlayingProgressChanged?.Invoke(currentPosition, Length);
             };
         }
 
@@ -41,7 +40,7 @@ namespace GVNotifier
         public void Play(string mp3file)
         {
             Stop();
-            mciSendString("open \"" + mp3file + "\" type mpegvideo alias MediaFile", null, 0, Handle);
+            mciSendString($"open \"{mp3file}\" type mpegvideo alias MediaFile", null, 0, Handle);
             mciSendString("set MediaFile time format milliseconds", null, 0, Handle);
 
             StringBuilder sb = new StringBuilder(255);
@@ -59,21 +58,15 @@ namespace GVNotifier
             timer.Stop();
         }
 
-        public void Pause()
-        {
-            mciSendString("pause MediaFile", null, 0, Handle);
-        }
+        public void Pause() => mciSendString("pause MediaFile", null, 0, Handle);
 
-        public void Resume()
-        {
-            mciSendString("resume MediaFile", null, 0, Handle);
-        }
+        public void Resume() => mciSendString("resume MediaFile", null, 0, Handle);
 
         bool seeking = false;
         public void Seek(int pos)
         {
             seeking = true;
-            Trace.WriteLine(mciSendString("seek MediaFile to " + pos, null, 0, Handle));
+            Trace.WriteLine(mciSendString($"seek MediaFile to {pos}", null, 0, Handle));
             Trace.WriteLine(mciSendString("play MediaFile notify", null, 0, Handle));
         }
 
@@ -86,8 +79,7 @@ namespace GVNotifier
                     seeking = false;
                     return;
                 }
-                if (PlayingCompleted != null)
-                    PlayingCompleted();
+                PlayingCompleted?.Invoke();
                 timer.Stop();
                 Length = 0;
             }
